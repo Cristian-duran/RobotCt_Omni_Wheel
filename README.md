@@ -17,44 +17,46 @@ Utilizamos dos controladores Motoron (direcciones I2C `0x10` y `0x11`) para mane
 - 
 ## 🚀 Para armado, instalación y ejecución de código
 ### Clonar el repositorio
-bash
 Copiar código
+```bash
 git clone https://github.com/Cristian-duran/RobotCt_Omni_Wheel
-cd mecanum-control
+```
 Dependencias y librerías necesarias
-🔧 Instalar todo de una:
-
-bash
-Copiar código
+🔧 Instalar todo en uno:
+```bash
 pip install -r requirements.txt
-O, si prefieres instalar manual:
+```
 
 motoron
-
-bash
-Copiar código
+```bash
 pip install motoron
+
+```
 
 ## ⚙️ Esquema de funcionamiento
 Conecta ambos módulos Motoron a la Raspberry Pi vía I2C.
 
-Ajusta las direcciones I2C en mecanum_control.py si fuese necesario:
+Ajusta las direcciones I2C si fuese necesario:
 
-python
-Copiar código
+```bash
 MC1_ADDR = 0x10  # módulo controla motores 1 y 2 (izquierdas)
 MC2_ADDR = 0x11  # módulo controla motores 3 y 4 (derechas)
+```
+
 Ajusta la velocidad base en la misma cabecera:
-
-python
-Copiar código
+```bash
 SPEED = 800  # rango de -máximo a +máximo
-Ejecuta el script de demostración:
+```
 
-bash
-Copiar código
-python mecanum_control.py
-Verás en consola la secuencia de movimientos:
+Ejecuta el script de demostración:
+```bash
+SPEED = 800  # rango de -máximo a +máximo
+```
+```bash
+python i2c_simple_multi_example.py
+```
+
+Se vera en consola la secuencia de movimientos:
 
 Adelante (2 s)
 

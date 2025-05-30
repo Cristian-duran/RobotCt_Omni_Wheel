@@ -3,25 +3,18 @@
 ### Nombres: Cristian Alejandro Durán Ignacio - Alfaro Ayzama José Fernando - Ever Rolando Rejas Espinoza
 🚀 **Proyecto: Control de Ruedas Mecanum con Motoron**
 
-💡 Este proyecto muestra cómo controlar un conjunto de cuatro ruedas mecanum omnidireccionales usando dos módulos Motoron I2C desde una Raspberry Pi (o cualquier host compatible con Python).
-
----
+💡 Este proyecto muestra cómo controlar un conjunto de cuatro ruedas mecanum omnidireccionales usando dos módulos Motoron I2C desde una Raspberry Pi 4
 
 ## 📌 Introducción
 
 Utilizamos dos controladores Motoron (direcciones I2C `0x10` y `0x11`) para manejar cuatro motores con ruedas mecanum, logrando movimientos en cuatro direcciones: adelante, atrás, lateral derecha y lateral izquierda.  
-La lógica de deslizamiento lateral aprovecha la configuración de los módulos:
-
-- **Movimiento a la derecha**: ruedas derechas giran hacia adelante, ruedas izquierdas giran hacia atrás.  
-- **Movimiento a la izquierda**: ruedas derechas giran hacia atrás, ruedas izquierdas giran hacia adelante.
-
----
 
 ## 🧰 Tecnologías y Librerías
 
 - **Python 3**  
 - **motoron** (driver I2C para módulos Motoron)  
 - **time** (para temporización)
+- 
 ## 🚀 Para armado, instalación y ejecución de código
 ### Clonar el repositorio
 bash
@@ -71,9 +64,5 @@ Derecha (2 s)
 
 Izquierda (2 s)
 
-## 📌 Notas importantes
-Asegúrate de que el bus I2C esté habilitado en tu Raspberry Pi (raspi-config).
-
-La constante SPEED controla la potencia; prueba valores menores o mayores según el chasis y la carga.
-
-Para integrar control por teclado, joystick o red, simplemente llama a las funciones move_forward(), move_backward(), strafe_right(), strafe_left() y stop_all() desde tu gestor de eventos o bucle principal.
+## 📌 Nota importante
+Asegúrarnos de que el bus I2C esté habilitado en tu Raspberry Pi (raspi-config).

@@ -26,7 +26,7 @@ La lógica de deslizamiento lateral aprovecha la configuración de los módulos:
 ### Clonar el repositorio
 bash
 Copiar código
-git clone https://github.com/TU_USUARIO/mecanum-control.git
+git clone https://github.com/Cristian-duran/RobotCt_Omni_Wheel
 cd mecanum-control
 Dependencias y librerías necesarias
 🔧 Instalar todo de una:
